@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Provides additional hooks for custom functionality.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function nfl_list_theme() {
+  return [
+    'nfl_list' => [
+      'variables' => ['nfl_data' => NULL],
+    ],
+  ];
+}
+

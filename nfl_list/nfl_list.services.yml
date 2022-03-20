@@ -1,0 +1,3 @@
+services:
+  nfl_data:
+    class: Drupal\nfl_list\NFLData

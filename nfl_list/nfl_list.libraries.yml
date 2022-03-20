@@ -1,0 +1,4 @@
+nfl_list:
+  css:
+    theme:
+      css/nfl_list.css: {}

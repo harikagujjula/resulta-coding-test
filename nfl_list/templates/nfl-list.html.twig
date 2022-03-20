@@ -1,0 +1,28 @@
+
+{{ attach_library('nfl_list/nfl_list') }}
+{% if nfl_data %}
+  <div class="nfl-teams-list-block"> 
+    <table> 
+      <thead>
+        <tr>
+          <th> Name </th>
+          <th> Conference </th>
+          <th> Division </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for key,nfl_team in nfl_data %}
+          <tr> 
+            <td> {{ nfl_team.name }} {{ nfl_team.nickname }} </td>
+            <td> {{ nfl_team.conference }} </td>
+            <td> {{ nfl_team.division }} </td>
+          </tr>
+        {% endfor %}
+      <tbody>
+    </table>
+  </div>
+{% else %}
+  <div class="empty-nfl-teams-list-block">
+    No data found.
+  </div>
+{% endif %}

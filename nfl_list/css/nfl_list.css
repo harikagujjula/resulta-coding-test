@@ -1,0 +1,37 @@
+/* Adding a minimum styling using CSS to add a scroll as there are multiple 
+records. */
+.nfl-teams-list-block {
+  height: 10em;
+}
+
+.nfl-teams-list-block table {
+  /* Using the latest way to make responsive using flex */
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+}
+
+.nfl-teams-list-block table thead {
+  /* Head takes the height it requires, 
+  and it's not scaled when table is resized */
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.nfl-teams-list-block table tbody {
+  /* Body takes all the remaining available space */
+  flex: 1 1 auto;
+  display: block;
+  overflow-y: scroll;
+}
+
+.nfl-teams-list-block table tbody tr {
+  width: 100%;
+}
+
+.nfl-teams-list-block table thead,
+.nfl-teams-list-block table tbody tr {
+  display: table;
+  table-layout: fixed;
+}
